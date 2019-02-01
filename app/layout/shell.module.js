@@ -18,8 +18,8 @@
                     controller: "Forecast"
                 })
                 .when("/", {
-                    templateUrl: "app/search/search.html",
-                    controller: "Search"
+                    templateUrl: "index.html",
+                    controller: ""
                 })
                 .otherwise({
                     redirectTo: "/search"
