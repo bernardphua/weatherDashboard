@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+
+    <head>
+        <!-- <base href="/"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Weather Dashboard</title>
+        <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+        <link href="content/css/bootstrap-theme.min.css" rel="stylesheet" />
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+        <link href="content/css/custom.css" rel="stylesheet" />
+        <script src="vendor/jquery-3.3.1.js"></script>
+        <script src="vendor/bootstrap.js"></script>
+        <script src="vendor/angular.js"></script>
+        <script src="vendor/angular-route.js"></script>
+        <script src="vendor/angular-resource.js"></script>
+        <script src="vendor/highcharts.js"></script>
+
+        <script src="app/app.module.js"></script>
+        <script src="app/layout/shell.module.js"></script>
+        <script src="app/layout/shell.ctrl.js"></script>
+        <script src="app/search/search.module.js"></script>
+        <script src="app/search/search.ctrl.js"></script>
+        <script src="app/weather/weather.module.js"></script>
+        <script src="app/weather/weather.ctrl.js"></script>
+        <script src="app/forecast/forecast.module.js"></script>
+        <script src="app/forecast/forecast.ctrl.js"></script>
+        <script src="app/forecast/forecast.view.js"></script>
+        <script src="app/component/component.module.js"></script>
+        <script src="app/component/search.view.js"></script>
+        <script src="app/data/data.module.js"></script>
+        <script src="app/data/weather.config.js"></script>
+        <script src="app/data/weather.svc.js"></script>
+    </head>
+
+    <body>
+        <ng-include src="'app/layout/shell.html'"></ng-include>
+    </body>
+
+</html>

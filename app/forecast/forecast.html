@@ -1,0 +1,28 @@
+<h4>Weather Forecast for {{forecast.city.name}}, {{forecast.city.country}}</h4>
+<div id="flex-container">
+    <div class="col-lg-5">
+        <table class="table">
+            <tbody>
+                <tr ng-repeat="weather in forecast.list">
+                    <td>{{getTime(weather.dt) | date: "dd MMM HH:mm"}} <img ng-src="{{getWeatherImgUrl(weather.weather[0].icon)}}"></td>
+                    <td>
+                        <span class="badge badge-warning">{{kelvinToDegree(weather.main.temp_max) | number}}°C</span>&nbsp;
+                        <span class="badge badge-secondary">{{kelvinToDegree(weather.main.temp_min) | number}}°C</span> &nbsp;&nbsp;
+                        <i>{{weather.weather[0].description}}</i>
+                        <p>
+                            Speed: {{weather.wind.speed}} m/s <br>
+                            Clouds: {{weather.clouds.all}} %, {{weather.pressure}} hpa
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-7">
+        <edgzy-forecast dp="forecast"></edgzy-forecast>
+    </div>
+</div>
+<div class="rows weather-controls">
+    <a href="#/search" class="btn btn-info margin-padding">Back to Search</a>
+    <a ng-href="#/weather/{{forecast.city.id}}" class="btn btn-info margin-padding">Back to Details</a>
+</div>

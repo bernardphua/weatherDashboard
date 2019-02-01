@@ -1,0 +1,32 @@
+﻿<div class="row">
+    <div class="col-md-12 search">
+        <edgzy-search-box></edgzy-search-box>
+    </div>
+    <div class="row">
+        <div class="col-md-12 cities">
+            <table class="table">
+                <tbody>
+                    <tr ng-repeat="city in weatherResult">
+                        <td>
+                            <img ng-src="{{getWeatherImgUrl(city.weather[0].icon)}}" />
+                        </td>
+                        <td>
+                            <b><a ng-href="#/weather/{{city.id}}">{{city.name}} , {{city.sys.country}} </a> </b>
+                            <img ng-src="{{getCountryFlagUrl(city.sys.country)}}" />
+                            <b><i>{{city.weather[0].description}}</i></b>
+                            <p>
+                                <span class="badge badge-warning">{{kelvinToDegree(city.main.temp) | number}}°C</span> Temperature from {{kelvinToDegree(city.main.temp_min) | number}} to {{kelvinToDegree(city.main.temp_max) | number}}°C, Wind
+                                {{city.wind.speed}}m/s. Clouds
+                                {{city.clouds.all}}%, {{city.main.pressure}} hpa
+                            </p>
+                            <p>
+                                Geo coords
+                                <a ng-href="#/weather/{{city.id}}">[ {{city.coord.lon}}, {{city.coord.lat}} ]</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
