@@ -17,13 +17,13 @@
                     templateUrl: "app/forecast/forecast.html",
                     controller: "Forecast"
                 })
-                .when("/", {
-                    templateUrl: "index.html",
-                    controller: ""
-                })
+                // .when("/", {
+                //     templateUrl: "/search",
+                //     controller: "Search"
+                // })
                 .otherwise({
                     redirectTo: "/search"
-                })
+                });
         });
 
 }());

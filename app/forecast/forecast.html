@@ -1,4 +1,8 @@
-<h4>Weather Forecast for {{forecast.city.name}}, {{forecast.city.country}}</h4>
+<div class="weather-controls">
+    <h4>Weather Forecast for {{forecast.city.name}}, {{forecast.city.country}}</h4>
+    <a href="#/search" class="btn btn-info margin-padding">Back to Search</a>
+    <a ng-href="#/weather/{{forecast.city.id}}" class="btn btn-info margin-padding">Back to Details</a>
+</div>
 <div id="flex-container">
     <div class="col-lg-5">
         <table class="table">
@@ -21,8 +25,4 @@
     <div class="col-lg-7">
         <edgzy-forecast dp="forecast"></edgzy-forecast>
     </div>
-</div>
-<div class="rows weather-controls">
-    <a href="#/search" class="btn btn-info margin-padding">Back to Search</a>
-    <a ng-href="#/weather/{{forecast.city.id}}" class="btn btn-info margin-padding">Back to Details</a>
 </div>
